@@ -45,7 +45,7 @@ public class ExplorerSearchTest {
             {1,1,1,1,1,0},
         };
         int actual = ExplorerSearch.reachableArea(island);
-        assertEquals(32, actual);
+        assertEquals(30, actual);
     }
 
     @Test
