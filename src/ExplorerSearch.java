@@ -34,9 +34,46 @@ public class ExplorerSearch {
         // I STRONGLY RECOMMEND testing some helpers you might make too
         return -1;
     }
-    
+
     public static List<int[]> possibleMoves(char[][] island, int[] location){
-        return new ArrayList<>();
+        int currentRow = location[0];
+        int currentColumn = location[1];
+
+        List<int[]> validLocations = new ArrayList<>();
+
+        //up
+        int newRow = currentRow -1;
+        int newColumn = currentColumn;
+        
+        if (newRow >= 0 && (island[newRow][newColumn] != 2 && island[newRow][newColumn] != 3)) {
+            validLocations.add(new int[]{newRow, newColumn});
+        }
+        
+        //down
+        newRow = currentRow + 1;
+        newColumn = currentColumn;
+        
+        if (newRow < island.length && (island[newRow][newColumn] != 2 && island[newRow][newColumn] != 3)) {
+            validLocations.add(new int[]{newRow, newColumn});
+        }
+
+        //left
+        newRow = currentRow;
+        newColumn = currentColumn - 1;
+        
+        if(newColumn >= 0 && (island[newRow][newColumn] != 2 && island[newRow][newColumn] != 3)){
+            validLocations.add(new int[]{newRow, newColumn});
+        }
+
+        //right
+        newRow = currentRow;
+        newColumn = currentColumn + 1;
+        
+        if (newColumn < island[0].length && (island[newRow][newColumn] != 2 && island[newRow][newColumn] != 3)) {
+            validLocations.add(new int[]{newRow, newColumn});
+        }
+
+        return validLocations;
     }
 
     public static int[] explorerLocation(char[][] island){
