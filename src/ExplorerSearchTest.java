@@ -112,7 +112,7 @@ public class ExplorerSearchTest {
 
     @Test
     public void testExplorerLocation_centerOfGrid(){
-        char[][] island = {
+        int[][] island = {
             {1, 1, 1},
             {1, 0, 1},
             {1, 1, 1}
@@ -123,7 +123,7 @@ public class ExplorerSearchTest {
 
     @Test
     public void testExplorerLocation_topOfGrid(){
-        char[][] island = {
+        int[][] island = {
             {1, 0, 1},
             {1, 1, 1},
             {1, 1, 1}
@@ -134,7 +134,7 @@ public class ExplorerSearchTest {
 
     @Test
     public void testExplorerLocation_bottomOfGrid(){
-        char[][] island = {
+        int[][] island = {
             {1, 1, 1},
             {1, 1, 1},
             {1, 0, 1}
@@ -145,7 +145,7 @@ public class ExplorerSearchTest {
 
     @Test
     public void testExplorerLocation_leftOfGrid(){
-        char[][] island = {
+        int[][] island = {
             {1, 1, 1},
             {0, 1, 1},
             {1, 1, 1}
@@ -156,7 +156,7 @@ public class ExplorerSearchTest {
 
     @Test
     public void testExplorerLocation_rightOfGrid(){
-        char[][] island = {
+        int[][] island = {
             {1, 1, 1},
             {1, 1, 0},
             {1, 1, 1}
@@ -167,7 +167,7 @@ public class ExplorerSearchTest {
 
     @Test
     public void testExplorerLocation_notFound(){
-        char[][] island = {
+        int[][] island = {
             {1, 1, 1},
             {1, 1, 1},
             {1, 1, 1}
@@ -181,7 +181,7 @@ public class ExplorerSearchTest {
 
     @Test
     public void testPossibleMoves_allDirectionsOpen() {
-        char[][] island = {
+        int[][] island = {
             {1, 1, 1},
             {1, 0, 1},
             {1, 1, 1}
@@ -198,7 +198,7 @@ public class ExplorerSearchTest {
     }
     @Test
     public void testPossibleMoves_EveryDirectionBlocked() {
-        char[][] island = {
+        int[][] island = {
             {2, 3, 2},
             {2, 0, 2},
             {2, 3, 2}
@@ -212,7 +212,7 @@ public class ExplorerSearchTest {
 
     @Test
     public void testPossibleMoves_partialEdge() {
-        char[][] enclosure = {
+        int[][] enclosure = {
             {0, 1, 1}
         };
         int[] location = {0, 0};
@@ -227,7 +227,7 @@ public class ExplorerSearchTest {
 
     @Test
     public void testPossibleMoves_topOnlyBlocked() {
-        char[][] island = {
+        int[][] island = {
             {2, 2, 2},
             {1, 0, 1},
             {2, 1, 2}
@@ -246,7 +246,7 @@ public class ExplorerSearchTest {
 
     @Test
     public void testPossibleMoves_rightOnlyBlocked() {
-        char[][] island = {
+        int[][] island = {
             {1, 1, 1},
             {1, 0, 2},
             {1, 1, 1}
@@ -263,7 +263,7 @@ public class ExplorerSearchTest {
     
     @Test
     public void testPossibleMoves_leftOnlyBlocked() {
-        char[][] island = {
+        int[][] island = {
             {1, 1, 1},
             {2, 0, 1},
             {1, 1, 1}
@@ -280,7 +280,7 @@ public class ExplorerSearchTest {
 
     @Test
     public void testPossibleMoves_DownOnlyBlocked() {
-        char[][] island = {
+        int[][] island = {
             {1, 1, 1},
             {1, 0, 1},
             {1, 2, 1}
@@ -297,7 +297,7 @@ public class ExplorerSearchTest {
 
     @Test
     public void testPossibleMoves_LeftAndRightOpen() {
-        char[][] island = {
+        int[][] island = {
             {2, 2, 2},
             {1, 0, 1},
             {2, 2, 2}
@@ -314,7 +314,7 @@ public class ExplorerSearchTest {
 
     @Test
     public void testPossibleMoves_UpAndDownOpen() {
-        char[][] island = {
+        int[][] island = {
             {2, 1, 2},
             {2, 0, 2},
             {2, 1, 2}

@@ -32,10 +32,11 @@ public class ExplorerSearch {
         // Implement your method here!
         // Please also make more test cases
         // I STRONGLY RECOMMEND testing some helpers you might make too
+        // int[] startLocation = explorerLocation(island);
         return -1;
     }
 
-    public static List<int[]> possibleMoves(char[][] island, int[] location){
+    public static List<int[]> possibleMoves(int[][] island, int[] location){
         int currentRow = location[0];
         int currentColumn = location[1];
 
@@ -76,7 +77,7 @@ public class ExplorerSearch {
         return validLocations;
     }
 
-    public static int[] explorerLocation(char[][] island){
+    public static int[] explorerLocation(int[][] island){
         for(int row = 0; row < island.length; row++){
             for(int col = 0; col < island[0].length; col++){
                 if(island[row][col] == 0){
