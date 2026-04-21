@@ -34,6 +34,10 @@ public class ExplorerSearch {
         // I STRONGLY RECOMMEND testing some helpers you might make too
         return -1;
     }
+    
+    public static List<int[]> possibleMoves(char[][] island, int[] location){
+        return new ArrayList<>();
+    }
 
     public static int[] explorerLocation(char[][] island){
         for(int row = 0; row < island.length; row++){
