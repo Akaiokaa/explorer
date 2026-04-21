@@ -38,7 +38,7 @@ public class ExplorerSearch {
     public static int[] explorerLocation(char[][] island){
         for(int row = 0; row < island.length; row++){
             for(int col = 0; col < island[0].length; col++){
-                if(island[row][col] == '0'){
+                if(island[row][col] == 0){
                     return new int[] {row, col};
                 }
             }
